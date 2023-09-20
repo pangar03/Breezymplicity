@@ -172,7 +172,7 @@ a {
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: url("assets/BreezymplicityLogoBig.jpg");
+    background-image: url("/assets/BreezymplicityLogoBig.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
