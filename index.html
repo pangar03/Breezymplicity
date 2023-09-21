@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breezymplicity page</title>
+    
     <!-- Fontshare -->
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,300&display=swap" rel="stylesheet">
     <!-- Google fonts -->
@@ -11,8 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
     <!-- JS -->
-    <script src="..//js/main.js"></script>
-    
+    <title>Breezymplicity page</title>
     
 </head>
 <body>
@@ -35,12 +34,12 @@
                     </button>
                 </div>
                 <div class="nav-list">
-                    <ul class="nav-list">
+                    <ul class="nav-links">
                         <li><a href="#home">home</a></li>
-                        <li><a href="#home">about</a></li>
-                        <li><a href="#home">portfolio</a></li>
-                        <li><a href="#home">blog</a></li>
-                        <li><a href="#home">contact</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#contact">contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,6 +62,157 @@
             </div>
         </div>
         <!-- Banner End -->
+        <!-- About Start -->
+        <div class="about-section" id="about">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="about-text">
+                        <div class="title">
+                            <span>About me</span>
+                            <h2>
+                                I am an interactive media designer based in Colombia, student of the ICESI University in Cali
+                            </h2>
+                        </div>
+                        <div class="desc">
+                            <p>
+                                I'm very dedicated to my work, passionate about design and transforming the world with my creations.
+                                I focus mainly on UX/UI Design, Front-End development, Videogame development and design, branding and 
+                                3D modelling.
+                            </p>
+                        </div>
+                        <div class="button">
+                            <a href="#about">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- SKills Start -->
+        <div class="skills-section">
+            <div class="container">
+                <div class="skills-inner">
+                    <div class="left">
+                        <div class="title">
+                            <span>My skills</span>
+                            <h2>Software development Skills</h2>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Through my whole career, I've been cultivating several skills to improve my software developtment 
+                                abilities, learning languages such as python, C, C++, C#, Scala, JavaScript alongside with HTML5 and CSS3.
+                                Frameworks like Django, React and Unity.
+                            </p>
+                            </div>
+                    </div>
+                    <div class="right">
+                        <div class="progress-inner">
+                            <span>
+                                <div class="lable">front end developer</div>
+                                <div class="number">90%</div>
+                            </span>
+                            <span>
+                                <div class="inner-skills">
+                                    <span data-value="90%"></span>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="progress-inner">
+                            <span>
+                                <div class="lable">UX/UI design</div>
+                                <div class="number">95%</div>
+                            </span>
+                            <span>
+                                <div class="inner-skills">
+                                    <span data-value="95%"></span>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="progress-inner">
+                            <span>
+                                <div class="lable">game development</div>
+                                <div class="number">80%</div>
+                            </span>
+                            <span>
+                                <div class="inner-skills">
+                                    <span data-value="80%"></span>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills End -->
+        <!-- Contact Start -->
+        <div class="contact-section" id="contact">
+            <div class="contact-inner">
+                <div class="text">
+                    <h3>Let's work together</h3>
+                </div>
+                <div class="button">
+                    <a href="#contact" class="popup-btn popup-contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="box-inner">
+                <div class="bg-contact"></div>
+                <div class="box-contact">
+                    <div class="left">
+                        <div class="contact-title">
+                            <h3>Contact Me</h3>
+                        </div>
+                        <form action="/" class="contact-form">
+                            <div class="first">
+                                <div class="form-input">
+                                    <input type="text" placeholder="Name">
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="last">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="button">
+                                <a href="#contact">
+                                    <span>Send Message</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <div class="info-contact">
+                            <div class="list-inner">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>plopez0428@hotmail.com</p>
+                            </div>
+                            <div class="list-inner">
+                                <a href="https://www.linkedin.com/in/pablo-lopez-7194831b6/"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/pangar03"><i class="fa-brands fa-github"></i></a>
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+        <!-- Footer Start -->
+        <div class="footer-section">
+            <div class="container">
+                <div class="inner-footer">
+                    <p>
+                        &copy; <span id="date"></span>
+                            By  <a href="#">Breezymplicity</a>
+                            Based on Wave Dev tutorial, only used for academic purposes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
     </section>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/8fd88ba57c.js" crossorigin="anonymous"></script>
 </body>
 </html>

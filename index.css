@@ -49,6 +49,15 @@ a {
     z-index: 999;
 }
 
+@media(max-width: 500px){
+    .nav-topbar {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
 .nav-topbar .topbar-inner {
     position: relative;
     max-width: 100%;
@@ -56,6 +65,13 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 18px 50px;
+}
+
+@media(max-width: 500px){
+    .nav-topbar .topbar-inner, 
+    .nav-topbar .topbar-inner ul {
+        flex-direction: column;
+    }
 }
 
 .nav-topbar .topbar-inner .logo .logo-start{
@@ -92,6 +108,20 @@ a {
     color: var(--black-color);
 }
 
+@media(max-width: 500px){
+    .nav-topbar .nav-list {
+        height: 0;
+        visibility: hidden;
+        transition: all .5s ease;
+    }
+
+    .nav-topbar .nav-list.show-list{
+        height: 0;
+        visibility: visible;
+        transition: all .5s ease;
+    }
+}
+
 .nav-topbar .topbar-inner ul {
     position: relative;
     display: flex;
@@ -99,6 +129,12 @@ a {
 
 .nav-topbar .topbar-inner ul li {
     margin: 0 25px 0 0;
+}
+
+@media(max-width: 500px){
+    .nav-topbar .topbar-inner ul li {
+        margin-top: 4px;
+    }
 }
 
 .nav-topbar .topbar-inner ul li a {
@@ -118,6 +154,12 @@ a {
     display: none;
 }
 
+@media (max-width: 500px){
+    .nav-topbar .nav-btn {
+        display: block;
+    }
+}
+
 .nav-topbar .nav-btn .btn {
     width: 100%;
     height: 100%;
@@ -135,7 +177,25 @@ a {
     margin-bottom: 6px;
     border-radius: 4px;
     background-color: #000;
+    transition: all .5s ease;
 }
+
+.nav-topbar .nav-btn.active span:nth-of-type(1) {
+    position: absolute;
+    margin: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.nav-topbar .nav-btn.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav-topbar .nav-btn.active span:nth-of-type(3) {
+    position: absolute;
+    margin: 0;
+    transform: rotate3d(0, 0, 1, -45deg);
+}
+
 
 /* Banner */
 
@@ -185,4 +245,326 @@ a {
     top: 0;
     bottom: 0;
     clip-path: polygon(0% 100%, 21% 0%, 100% 0%, 100% 100%);
+}
+
+/* About section */
+
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+.about-section .about-inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-section .about-text {
+    position:relative;
+    width: 100%;
+    padding-top: 120px;
+}
+
+.about-section .desc {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.title span {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 4px 10px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 18px;
+    background-color: var(--black-color);
+    color: #fff;
+}
+
+.title h2 {
+    position: relative;
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.button {
+    padding: 30px 0;
+}
+
+.button a {
+    position: relative;
+    display: inline-block;
+    padding: 13px 48px;
+    font-family: "Montserrat";
+    border: 2px solid var(--black-color);
+    background-color: var(--black-color);
+    color: #fff;
+    transition: all .5s ease;
+
+}
+
+.button a:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+/* Skills */
+
+.skills-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+}
+
+.skills-section .skills-inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.skills-section .left {
+    position: relative;
+    width: 50%;
+}
+
+.skills-section .left .text {
+    padding-top: 27px;
+}
+
+.skills-section .right {
+    position: relative;
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.skills-section .progress-inner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 34px;
+}
+
+.skills-section .progress-inner>span {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7px;
+    display: block;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.skills-section .progress-inner .inner-skills {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.skills-section .progress-inner .inner-skills span {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: var(--black-color);
+    transition: all .5s ease;
+}
+
+/* Contact */
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.contact-section .contact-inner {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.contact-section .contact-inner .text h3 {
+    position: relative;
+    padding-bottom: 35px;
+    font-size: 55px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    line-height: 1;
+    color: #333;
+}
+
+.box-inner {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.box-inner.open-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.box-inner .box-contact {
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    overflow-x: scroll;
+    padding: 30px;
+    display: flex;
+}
+
+.box-inner .left .form-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.box-inner .left input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.box-inner .left textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.box-inner .box-contact::-webkit-scrollbar {
+    width: 5px;
+}
+
+.box-inner .box-contact::-webkit-scrollbar-thumb {
+    background-color: #c7c5c5;
+    border-radius: 20px;
+}
+
+.box-inner .bg-contact {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.box-inner .left {
+    position: relative;
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 10vh;
+}
+
+.box-inner .contact-title h3 {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.box-inner .left input[type="text"], 
+textarea {
+    min-width: auto;
+    height: 44px;
+    padding: 10px !important;
+    font-family: "Montserrat";
+    font-size: 15px;
+    line-height: 1.6;
+    initial-letter: 1.4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.box-inner .left input:focus, .box-inner .left textarea:focus {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.box-inner .right {
+    position: relative;
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 10vh;
+}
+
+.box-inner .right .list-inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.box-inner .right .list-inner i {
+    position: relative;
+    margin-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    color: #000;
+}
+
+.box-inner .right .list-inner p {
+    position: relative;
+    margin-left: 20px;
+    font-family: "Montserrat";
+    font-size: 27px;
+    font-weight: 300;
+}
+
+/* Footer Section */
+
+.footer-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 25px 0;
+    background-color: #333;
+}
+
+.footer-section .inner-footer {
+    position: relative;
+    text-align: center;
+}
+
+.footer-section .inner-footer p, .footer-section .inner-footer a {
+    font-family: "clash-display", sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
 }
